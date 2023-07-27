@@ -1,4 +1,6 @@
+require_relative 'perfect_squares'
 MAX = 1000
+PERFECT_SQUARES = get_perfect_squares(MAX)
 
 def get_euler_bricks
     start_time = Time.now
@@ -31,13 +33,13 @@ end
 def is_pythagorean_thruple(a, b, c)
     a_squared = a**2
     b_squared = b**2
-    if Math.sqrt(a_squared + b_squared) % 1 != 0
+    if !PERFECT_SQUARES.include?(a_squared + b_squared)
         return false
     end
     c_squared = c**2
-    if Math.sqrt(b_squared + c_squared) % 1 != 0
+    if !PERFECT_SQUARES.include?(b_squared + c_squared)
         false
-    elsif Math.sqrt(a_squared + c_squared) % 1 != 0
+    elsif !PERFECT_SQUARES.include?(a_squared + c_squared)
         false
     else
         true
