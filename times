@@ -1,7 +1,10 @@
 Base: 
-164.321957
-145.53766
+164.321957 seconds
+145.53766 seconds
 
 With perfect_squares:
-105.907118
-106.947315
+105.907118 seconds
+106.947315 seconds
+
+Switched from a**2 to a*a:
+67.924653 seconds

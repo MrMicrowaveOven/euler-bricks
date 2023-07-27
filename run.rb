@@ -31,12 +31,12 @@ def get_euler_bricks
 end
 
 def is_pythagorean_thruple(a, b, c)
-    a_squared = a**2
-    b_squared = b**2
+    a_squared = a*a
+    b_squared = b*b
     if !PERFECT_SQUARES.include?(a_squared + b_squared)
         return false
     end
-    c_squared = c**2
+    c_squared = c*c
     if !PERFECT_SQUARES.include?(b_squared + c_squared)
         false
     elsif !PERFECT_SQUARES.include?(a_squared + c_squared)
